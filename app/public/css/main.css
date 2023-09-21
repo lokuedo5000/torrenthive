@@ -1,0 +1,628 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.m0{
+    margin: 0;
+}
+.p0{
+    padding: 0!important;
+}
+.py-1{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.px-1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.box-shadow-no{
+    box-shadow: none!important;
+}
+.loading-page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238, 238, 238);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading-info{
+    text-align: center;
+}
+.logo-6 h3 {
+    color: #512da8;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 30px;
+    line-height:1.3;
+}
+.logo-6 h3 span {
+    background: #512da8;
+    color: #fff;
+    display: inline-block;
+    line-height: 1.8;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+body {
+    background-color: #ebebeb;
+    position: relative;
+    padding-top: 70px;
+}
+
+.w100 {
+    width: 100%;
+}
+
+/* body class */
+.body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+}
+
+.pos-a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.menu {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.menu .menu-icon {
+    padding: 10px 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s all;
+    margin-left: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.menu .menu-icon:hover {
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+.menu-left {
+    width: 350px;
+    height: 100%;
+    position: fixed;
+    left: -380px;
+    top: 0;
+    padding-top: 70px;
+    transition: 0.3s all;
+    z-index: 20;
+    display: none;
+}
+
+.menu-left-active::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.body-menu {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 40;
+}
+
+.menu .logo {
+    font-family: "Roboto Thin";
+    padding: 10px 10px;
+    font-size: 25px;
+    color: #ebebeb;
+    display: flex;
+    align-items: center;
+}
+
+.menu .logo .hub {
+    font-family: "Roboto Bold";
+}
+
+.menu .item-menu {
+    display: flex;
+}
+
+.menu .item-menu li {
+    list-style: none;
+}
+
+.menu .item-menu li a {
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: 0.3s all;
+    font-family: "Roboto";
+    position: relative;
+}
+.badge-alert{
+    background-color: #b33f2a;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    display: none;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+
+}
+.menu .item-menu li a:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+.menu-list {
+    width: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.menu-list li {
+    list-style: none;
+}
+
+.menu-list li a {
+    list-style: none;
+    color: #222;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: 0.3s all;
+    font-family: "Roboto";
+    width: 100%;
+    display: inline-block;
+}
+
+.menu-list li a:hover {
+    color: #fff;
+    background-color: rgb(82, 45, 168);
+}
+
+@media (max-width: 900px) {
+    .menu .menu-icon{
+        display: block;
+    }
+    .menu .menu-movil {
+        display: none;
+    }
+
+    .menu-list {
+        display: inline-block;
+    }
+    .menu-left{
+        display: block;
+    }
+}
+
+/* body-row */
+.body-row {
+    width: 100%;
+    padding: 5px;
+}
+
+.sprt-art+.sprt-art {
+    margin-top: 20px;
+}
+
+.sprt-art-1+.sprt-art-1 {
+    margin-top: 12px;
+}
+
+.title-row {
+    font-family: "Roboto";
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.ads-row {
+    position: relative;
+}
+
+.ads-container {
+    width: 100%;
+    padding-top: 80%;
+    background-color: #111;
+    border-radius: 5px;
+}
+
+/* body-form */
+.body-form {
+    width: 100%;
+    height: 1000px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.sprt-form+.sprt-form {
+    margin-top: 20px;
+}
+
+.form-file-or-magnet {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background-color: #e4e4e4;
+    border-radius: 35px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.185);
+}
+
+.title-form {
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: calc(100% - 70px);
+    background-color: #f5f5f5;
+    padding: 0 20px;
+}
+
+.form-input input::placeholder {
+    color: #111;
+}
+
+.form-input input {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+.form-btn {
+    width: 70px;
+    height: 100%;
+    background-color: #512da8;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-btn:active {
+    background-color: #48259b;
+}
+
+.drag-drop {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 90px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.drag-over{
+    border: 2px dashed #6e6e6e;
+}
+.disk-info {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 2px;
+}
+.disk-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.disk-sy {
+    width: 25%;
+    height: 130px;
+    padding: 20px 20px;
+}
+
+.disk-body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.icono-disk{
+    background-color: #48259b;
+    color: #fff;
+    height: 100%;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.info-disk{
+    width: calc(100% - 70px);
+    height: 100%;
+    overflow: hidden;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.info-disk-all{
+    width: 100%;
+}
+.title-disk{
+    font-size: 20px;
+    font-family: "Roboto";
+    margin-bottom: 3px;
+}
+
+.info-disk .progress{
+   margin: 0; 
+   margin-bottom: 3px;
+}
+.title-disp-disk{
+    font-size: 12px;
+    width: 100%;
+    font-family: "Roboto";
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media (max-width: 1300px){
+    .disk-sy{
+        width: 33.33333333333333%;
+    }
+}
+@media (max-width: 900px){
+    .disk-sy{
+        width: 50%;
+    }
+}
+
+@media (max-width: 550px){
+    .disk-sy{
+        width: 100%;
+    }
+}
+
+/* Modal */
+.title-modal-torrent{
+    font-size: 25px;
+    font-family: "Roboto";
+}
+
+.info-file-torrent{
+    width: 100%;
+}
+.art-torrent{
+    font-family: "Roboto";
+}
+.title-art-torrent{
+    font-size: 20px;
+}
+.text-torrent{
+    font-size: 15px;
+}
+.name-torrent{
+    font-size: 20px;
+    font-family: "Roboto";
+}
+.grp{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    padding-right: 70px;
+    box-shadow: 0 1px 0 0 #26a69a;
+}
+.grp input{
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+    margin: 0!important;
+    box-shadow: none!important;
+}
+.grp-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-art{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px 0;
+    font-family: "Roboto";
+}
+.view-size{
+    text-align: right;
+}
+.loading-magnet{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgba(17, 17, 17, 0.302);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.bg-preloader-magnet{
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.596);
+}
+.alerts{
+    width: 100%;
+    position: relative;
+}
+.alerts-now{
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    font-weight: 300;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.title-all{
+    font-size: 18px;
+    font-family: "Roboto";
+    width: 100%;
+}
+.title-alert{
+    font-size: 25px;
+    font-family: "Roboto";
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.datetime{
+    font-size: 15px;
+}
+.message-alert{
+    font-size: 15px;
+    font-family: "Roboto";
+}
+.id-name{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.id-hash{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+/* downloads */
+.downloads-list{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.torrent-download-container + .torrent-download-container{
+    margin-top: 20px;
+}
+.torrent-download-container{
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.name-download-torrent{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Roboto";
+}
+.magnet-download-torrent{
+    font-size: 15px;
+    font-weight: 300;
+    font-family: "Roboto";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    color: #26a69a;
+    cursor: pointer;
+    transition: 0.3s all;
+    margin-bottom: 10px;
+}
+.magnet-download-torrent:active{
+    color: #126e65;
+    
+}
+.progress-download{
+    margin-bottom: 7px;
+}
+.info-download-torrent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.info-download-torrent span{
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    line-height: 1;
+    font-size: 15px;
+}
+.sprt-gui{
+    padding: 0 4px;
+    
+}
+.data-info-torrent-2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.updown{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.btn-download-torrent{
+    margin-top: 15px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

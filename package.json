@@ -1,0 +1,43 @@
+{
+  "name": "torrenthive",
+  "title": "TorrentHive",
+  "version": "1.0.0",
+  "server": {
+    "homepage": "/",
+    "port": 3020,
+    "host": "http://localhost",
+    "pathviews": "app/views",
+    "pathpublic": "app/public"
+  },
+  "description": "TorrentHive provides an intuitive user interface that allows users to manage their torrent downloads efficiently.",
+  "tags": "Torrents, Download Management",
+  "main": "torrenthive.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokuedo5000/sfree.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Torrents",
+    "Download Management",
+    "File Sharing",
+    "Content Discovery",
+    "Dark Theme",
+    "Torrent Community",
+    "Fast Downloads",
+    "Privacy",
+    "Continuous Updates",
+    "Movie Downloads",
+    "Music Downloads",
+    "Software Downloads",
+    "Torrent Management",
+    "User Experience",
+    "Torrent Categories",
+    "Seeds and Peers",
+    "Security"
+  ],
+  "author": "@SFree",
+  "license": "MIT"
+}

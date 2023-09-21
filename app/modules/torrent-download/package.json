@@ -1,0 +1,12 @@
+{
+  "name": "torrent-download",
+  "version": "1.0.0",
+  "description": "",
+  "main": "torrentdownload.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Lwte",
+  "license": "ISC"
+}

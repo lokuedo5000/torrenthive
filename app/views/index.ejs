@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TorrentHive</title>
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="/lib/icomoon/icomoon.css">
+
+  <!-- Roboto -->
+  <link rel="stylesheet" href="/lib/roboto/roboto.css">
+
+  <!-- Materializecss -->
+  <link rel="stylesheet" href="/lib/materialize/css/materialize.min.css">
+
+  <!-- Main Css -->
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="loading-page">
+    <div class="loading-info">
+      <!-- <h3 class="logo-text">TorrentHive</h3> -->
+      <div class="logo-holder logo-6">
+        <a href="#">
+          <h3>Torrent <span>Hive</span></h3>
+        </a>
+      </div>
+
+      <div class="active-loading preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="spinner-layer spinner-red">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="spinner-layer spinner-yellow">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="spinner-layer spinner-green">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Menu -->
+  <%- include('../include/menu.ejs') %>
+    <!-- end -->
+    <div class="body">
+      <div class="container">
+        <div class="body-form z-depth-2">
+          <div class="sprt-form">
+            <div class="title-form">
+              Select File or a Magnet link
+            </div>
+            <div class="form-file-or-magnet">
+              <div class="form-input">
+                <input type="text" name="file-or-magnet" id="file-or-magnet" spellcheck="false"
+                  placeholder="File or Magnet">
+              </div>
+              <div class="form-btn z-depth-2 action-send icon-dots-three-vertical search-file"></div>
+            </div>
+          </div>
+
+          <div class="sprt-form">
+            <div class="title-form">
+              Or drag and drop a file
+            </div>
+            <div class="drag-drop" id="dropzone">
+              Drag the torrent file here
+            </div>
+          </div>
+
+          <div class="sprt-form">
+            <div class="title-form">
+              Storage Information
+            </div>
+            <div class="disk-info">
+              <div class="disk-row">
+
+                <!-- <div class="disk-sy">
+                  <div class="disk-body z-depth-1">
+                    <div class="icono-disk z-depth-1 icon-drive1"></div>
+                    <div class="info-disk">
+                      <div class="info-disk-all">
+                        <div class="title-disk">Unidad (C:)</div>
+                        <div class="progress">
+                          <div class="determinate" style="width: 70%"></div>
+                        </div>
+                        <div class="title-disp-disk">
+                          29 GB available / 118 GB
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="loading-magnet">
+      <div class="bg-preloader-magnet">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="title-modal-torrent sprt-art">
+          Torrent Seleccionado
+        </div>
+        <div class="info-file-torrent sprt-art">
+          <div class="art-torrent sprt-art">
+            <div class="title-art-torrent">
+              Name
+            </div>
+            <span class="text-torrent text-name-torrent">...</span>
+            <span class="icon-content_copy" onclick="kit.copyToClipboard('.text-name-torrent')"></span>
+          </div>
+
+          <div class="art-torrent sprt-art">
+            <div class="title-art-torrent">
+              InfoHash
+            </div>
+            <span class="text-torrent text-infohash-torrent">...</span>
+            <span class="icon-content_copy" onclick="kit.copyToClipboard('.text-infohash-torrent')"></span>
+          </div>
+
+          <div class="art-torrent sprt-art">
+            <div class="title-art-torrent">
+              Peso
+            </div>
+            <span class="text-torrent text-peso-torrent">...</span>
+            <span class="icon-content_copy" onclick="kit.copyToClipboard('.text-peso-torrent')"></span>
+          </div>
+
+          <div class="art-torrent sprt-art">
+            <div class="title-art-torrent">
+              Magnet Torrent
+            </div>
+            <div class="had-container">
+              <div class="grp">
+                <input type="text" class="magnet-uri" spellcheck="false">
+                <div class="grp-btn icon-content_copy" onclick="kit.copyToClipboard('.magnet-uri')"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="art-torrent sprt-art">
+            <div class="title-art-torrent">
+              Files
+            </div>
+            <div class="had-container art-files-torrent" id="art-files-torrent">
+              <!-- <div class="row m0 py-1 row-bg blue-grey lighten-5">
+                <div class="col s4 p0">
+                  <div class="view-art">
+                    Call of Duty Black Ops 3.exe
+                  </div>
+                </div>
+                <div class="col s4 p0">
+                  <div class="view-art">
+                    pluto_t6_full_game\\redist\\DirectX\\Apr2005_d3dx9_25_x86.cab
+                  </div>
+                </div>
+                <div class="col s4 p0">
+                  <div class="view-art view-size">
+                    1 GB
+                  </div>
+                </div>
+              </div> -->
+              
+            </div>
+
+            <div class="had-container">
+              <div class="row m0 center">
+                <ul class="pagination" id="pagination"></ul>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="waves-effect waves-green btn-flat btn-new-download" onclick="newDownload()">Descarga</a>
+      </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="/lib/jQuery/jquery.min.js"></script>
+    <!-- materialize -->
+    <script src="/lib/materialize/js/materialize.min.js"></script>
+    <script src="/lib/materialize/js/init.js"></script>
+
+    <!-- pagination -->
+    <script src="/js/pagination.materialize.js"></script>
+
+    <!-- Kit -->
+    <script src="/js/code.util.kit.js"></script>
+    <!-- Main -->
+    <script src="/js/main.js"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
